@@ -26,6 +26,8 @@ This cookbook is tested against a matrix of Chef versions and platforms:
 X
 
 - Ubuntu 16.04
+- Ubuntu 18.04
+- Debian 9.5
 - Centos 6.10
 - Centos 7.5
 

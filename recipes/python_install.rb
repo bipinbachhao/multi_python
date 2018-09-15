@@ -26,6 +26,8 @@ node['multi_python']['download_url'].each do |version, release|
     source_directory source_dir
     prefix prefix[version]
     configure_flags ['--enable-shared',
+                     '--enable-optimizations',
+                     '--enable-unicode=ucs4',
                      "LDFLAG=\"-Wl,-rpath=#{prefix[version]}/lib\""]
     creates "#{prefix[version]}/bin/python#{version}"
   end
