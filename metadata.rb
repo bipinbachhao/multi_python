@@ -4,7 +4,7 @@ maintainer_email 'bipinbachhao@gmail.com'
 license 'Apache 2.0'
 description 'Installs/Configures Multiple versions of Python'
 long_description 'Installs/Configures performs installations of Multiple versions of Python using tar_package'
-version '0.1.1'
+version '0.1.2'
 chef_version '>= 12.14' if respond_to?(:chef_version)
 
 depends 'build-essential'
