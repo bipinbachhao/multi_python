@@ -31,3 +31,18 @@ node['multi_python']['download_url'].each do |version, release|
     creates "#{prefix[version]}/bin/python#{version}"
   end
 end
+
+node['multi_python']['version'].each do |version, release|
+  template "#{prefix[version]}/python_activator" do
+    source 'python_activator.erb'
+    owner 'root'
+    group 'root'
+    mode '0744'
+    variables(
+      version: version,
+      release: release,
+      prefix: prefix[version]
+    )
+    action :create
+  end
+end

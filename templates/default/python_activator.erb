@@ -1,0 +1,8 @@
+# Activates Python Version <%= @version %>
+# Activates Python Release <%= @release %>
+
+# This file must be used with "source <%= @prefix %>/python_activator" *from bash*
+# You cannot run it directly
+
+export PATH=<%= @prefix %>/bin:$PATH
+export LD_LIBRARY_PATH=<%= @prefix %>/lib:$LD_LIBRARY_PATH
